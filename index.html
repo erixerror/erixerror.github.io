@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<link rel="stylesheet" href="css/style.css">
+<link rel="shortcut icon" href="img/film.ico" />
+<title>FILMAS</title>
+
+
+</head>
+<body>
+<div class="border_groovy">
+
+<table id="grid" cellspacing="5">
+ <thead>
+     <tr>
+      <th class="first">pavadinimas</th>
+      <th>sezonas</th>
+      <th>serija</th>
+	  <th class="last">linkas</th>
+     </tr>
+</thead>
+</table>
+ <script src="css/tabletop.js"></script>
+<script src="css/jquery.js"></script>
+<script>
+        window.onload = function() {
+    init()
+  };
+
+  var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1Ts7n31xZV-DYD4DK9N8QHISeBuaS3Fz2pkhN6xkKAYw/pubhtml';
+
+  function init() {
+    Tabletop.init({
+      key: public_spreadsheet_url,
+      callback: showInfo,
+      simpleSheet: true
+    })
+  }
+
+  function showInfo(data, tabletop) {
+    var tr;
+    for (var i = 0; i < data.length; i++) {
+      tr = $('<tr/>');
+	  tr.append("<td class='first'><img src='" + data[i].img + "' width='55'>" + data[i].name + "</td>");
+      tr.append("<td>" + data[i].s00 + "</td>");
+      tr.append("<td>" + data[i].e00 + "</td>");
+      tr.append("<td class='last'><a href='" + data[i].url+ "' target='_blank'>LINKAS</a></td>");
+	 
+	 $('table').append(tr);
+    }
+    console.log(data);
+  }
+    </script>
+
+
+</div>
+</body> 
+</html>
