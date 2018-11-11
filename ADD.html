@@ -1,0 +1,43 @@
+<html>
+<head>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+</script>
+<script>
+function postContactToGoogle() {
+var img=$('#img').val();
+var name=$('#name').val();
+var s00=$('#s00').val();
+var e00=$('#e00').val();
+var url=$('#url').val();
+
+$.ajax({
+url:"https://docs.google.com/forms/d/e/1FAIpQLSfW-voLLqxgyvy5zJiFfBxmdsSbkK6kIJtHYGWrhJ0f3V9E4g/formResponse",data:{"entry_803147922":img,"entry_1210254474":name,"entry_1595281455":s00,"entry_331517189":e00,"entry_806390645":url},type:"POST",dataType:"xml",statusCode: {0:function() { window.location.replace("thankyou.html");},200:function(){window.location.replace("thankyou.html");}}
+});
+}
+</script>
+
+
+
+
+<form>
+IMG:<br>
+<input id="img" name="img" type="text"><br>
+NAME:<br>
+<input  id="name" name="name" type="text"><br>
+S00:<br>
+<input  id="s00" type="text" name="s00">
+<br>
+E00:<br>
+<input  id="e00" type="text" name="e00">
+<br>
+URL:<br>
+<input  id="url" type="text" name="url">
+<br><br>
+<input type="button" name="Submit" id="Submit" onclick="postContactToGoogle()" value="Submit"/>
+
+</form>
+</body>
+</html>
+
+
