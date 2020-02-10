@@ -16,7 +16,8 @@
       <th class="first">pavadinimas</th>
       <th>sezonas</th>
       <th>serija</th>
-	  <th class="last">linkas</th>
+	  <th>linkas</th>
+	  <th class="last">edit</th>
      </tr>
 </thead>
 </table>
@@ -41,17 +42,18 @@
     var tr;
     for (var i = 0; i < data.length; i++) {
       tr = $('<tr/>');
-	  tr.append("<td class='first'><img src='" + data[i].img + "' width='55'>" + data[i].name + "</td>");
-      tr.append("<td>" + data[i].s00 + "</td>");
-      tr.append("<td>" + data[i].e00 + "</td>");
-      tr.append("<td class='last'><a href='" + data[i].url+ "' target='_blank'>LINKAS</a></td>");
+	  tr.append("<td class='first'><img src='" + data[i].IMG + "' width='55'>" + data[i].NAME + "</td>");
+      tr.append("<td>" + data[i].S00 + "</td>");
+      tr.append("<td>" + data[i].E00 + "</td>");
+      tr.append("<td><a href='" + data[i].URL+ "' target='_blank'>LINKAS</a></td>");
+	  tr.append("<td class='last'><a href='" + data[i].edit_url+ "' target='_blank'>EDIT</a></td>");
+	  
 	 
 	 $('table').append(tr);
     }
     console.log(data);
   }
     </script>
-
 
 </div>
 </body> 
