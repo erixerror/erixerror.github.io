@@ -21,8 +21,7 @@
      </tr>
 </thead>
 </table>
- <script src="css/tabletop.js"></script>
-<script src="css/jquery.js"></script>
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
 <script>
         window.onload = function() {
     init()
@@ -30,15 +29,20 @@
 
   var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1Ts7n31xZV-DYD4DK9N8QHISeBuaS3Fz2pkhN6xkKAYw/pubhtml';
 
-  function init() {
-    Tabletop.init({
-      key: public_spreadsheet_url,
-      callback: showInfo,
-      simpleSheet: true
-    })
-  }
+function init() {
+        Papa.parse(public_spreadsheet_url, {
+          download: true,
+          header: true,
+          complete: showInfo
+        })
+      }
 
-  function showInfo(data, tabletop) {
+      window.addEventListener('DOMContentLoaded', init)
+
+      function showInfo(results) {
+        var data = results.data
+
+ 
     var tr;
     for (var i = 0; i < data.length; i++) {
       tr = $('<tr/>');
