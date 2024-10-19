@@ -8,9 +8,9 @@ a:active  {color:#004A60; background-color:transparent; text-decoration:none}
     width: 50%;
     width: 580px;
 	border:solid 2em beige;
-  -moz-border-image: url(https://gdurl.com/BISu) 124 round;
-  -khtml-border-image: url(https://gdurl.com/BISu 124 round;
-  -o-border-image: url(https://gdurl.com/BISu) 124 round;
+  -moz-border-image: url(img/groovy.png) 124 round;
+  -khtml-border-image: url(img/groovy.png) 124 round;
+  -o-border-image: url(img/groovy.png)  124 round;
 }
 
 
@@ -57,7 +57,7 @@ table#grid {
 	text-align : center;
 	border-bottom: 1px solid #00A5D6;	
 	border-top: 1px solid #00A5D6;	
-	background:#00A5D6 url(https://gdurl.com/RwY7) right center no-repeat; 
+	background:#00A5D6 url(img/block.png)  right center no-repeat; 
 	color:#00A5D6;
 	padding:3px 10px;
 }
