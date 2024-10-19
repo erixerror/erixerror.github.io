@@ -42,21 +42,12 @@ function init() {
       function showInfo(results) {
         var data = results.data
 
- 
-    var tr;
-    for (var i = 0; i < data.length; i++) {
-      tr = $('<tr/>');
-	  tr.append("<td class='first'><img src='" + data[i].IMG + "' width='55'>" + data[i].NAME + "</td>");
-      tr.append("<td>" + data[i].S00 + "</td>");
-      tr.append("<td>" + data[i].E00 + "</td>");
-      tr.append("<td><a href='" + data[i].URL+ "' target='_blank'>LINKAS</a></td>");
-	  tr.append("<td class='last'><a href='" + data[i].edit_url+ "' target='_blank'>EDIT</a></td>");
-	  
-	 
-	 $('table').append(tr);
-    }
-    console.log(data);
-  }
+  alert("Successfully processed " + data.length + " rows!")
+        document.getElementById("food").innerHTML = "<strong>Foods:</strong> " + [ data[0].Name, data[1].Name, data[2].Name ].join(", ");
+        console.log(data);
+      }
+
+      document.write("The published spreadsheet is located at <a target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");  
     </script>
 
 </div>
