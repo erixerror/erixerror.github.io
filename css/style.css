@@ -1,0 +1,107 @@
+a:link         {color:#00A5D6; background-color:transparent; text-decoration:none}
+a:visited     {color:#00A5D6; background-color:transparent; text-decoration:none}
+a:hover       {color:#004A60; background-color:transparent; text-decoration:none}
+a:active  {color:#004A60; background-color:transparent; text-decoration:none}
+
+.border_groovy{
+	margin: auto;
+    width: 50%;
+    width: 580px;
+	border:solid 2em beige;
+  -moz-border-image: url(https://gdurl.com/BISu) 124 round;
+  -khtml-border-image: url(https://gdurl.com/BISu 124 round;
+  -o-border-image: url(https://gdurl.com/BISu) 124 round;
+}
+
+
+
+
+#nav li{
+    display: inline;
+    text-align: center;
+    list-style-type:none;   
+}
+#nav li a:hover{
+    color: #004A60;
+	}
+#nav li a{
+	padding:10px;
+    color: #00A5D6;
+    font-weight:BOLD;
+    font: 14px "Century Gothic", "Lucida Sans Unicode", "Lucida Grande", sans-serif;   
+}
+#grid * {
+	padding:0;
+	border:0 none;
+}
+table#grid {
+	width : 550px;
+	background-color:#fff;
+	border-collapse:separate;
+	border-spacing: 0px 5px ; 
+	margin : 15px;
+	color:#fff;
+	padding:0;
+	font: 12px "Century Gothic", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-transform:uppercase
+}
+#grid thead th {
+	background-color:#00A5D6;
+	text-align : center;
+	font-size:10px;
+	border : 5px solid #00A5D6;
+	border-right : 1px solid #fff;
+	padding:0
+}
+#grid td {
+	text-align : center;
+	border-bottom: 1px solid #00A5D6;	
+	border-top: 1px solid #00A5D6;	
+	background:#00A5D6 url(https://gdurl.com/RwY7) right center no-repeat; 
+	color:#00A5D6;
+	padding:3px 10px;
+}
+#grid td.first {
+	border-left: 1px solid #00A5D6;	
+	font-weight:700;
+	vertical-align:text-top;
+	text-align : left;
+	font-size:14px
+}
+#grid td img{
+	vertical-align:middle;
+	margin:2px 2em 2px 1em;
+}
+#grid td.last {
+	border-right:1px #00A5D6 solid;
+	background:#fff;
+	background-image:none
+}
+#grid th.last {
+	border-right:0 none;
+	text-align:center
+}
+#grid th.first {
+	text-align:left
+}
+input[type=text], select {
+	color: #00A5D6;
+    width: 65%;
+    padding: 4px 4px;
+    margin: 2px 0;
+    display: inline-block;
+    border: 1px solid #00A5D6;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 32%;
+    color: #00A5D6;
+    padding: 3px 3px;
+    margin: 5px 0;
+    border: none;
+	border-radius: 5px;
+    cursor: pointer;
+	background-color:white;
+	border: 1px solid #00A5D6;
+}
